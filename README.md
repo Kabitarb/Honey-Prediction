@@ -24,7 +24,7 @@ Prediction: The model projects honey production until 2050 based on the historic
 Python 3.x
 Libraries used: pandas, numpy, matplotlib, scikit-learn
 
-Key Results
+**Key Results**
 The model predicts a steady decline in honey production up to 2050. This aligns with concerns about decreasing bee populations and environmental factors impacting honey production.
 
 Current Trend: The model shows a significant downward trend from 1998 to 2012.
