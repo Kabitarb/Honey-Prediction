@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Honey Production Predictor</title>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 0 auto; padding: 20px; }
+        .container { background: #f9f9f9; padding: 20px; border-radius: 5px; }
+        h1 { color: #d4a017; }
+        input, button { padding: 8px; margin-top: 10px; }
+        .result { margin-top: 20px; padding: 10px; background: #e8f4f8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍯 Honey Production Predictor</h1>
+        <form action="/predict" method="POST">
+            <label for="year">Enter Year (1998-2050):</label>
+            <input type="number" name="year" min="1998" max="2050" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            <h3>Prediction for {{ year }}:</h3>
+            <p>{{ prediction }}</p>
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="result" style="background: #ffebee;">
+            {{ error }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
